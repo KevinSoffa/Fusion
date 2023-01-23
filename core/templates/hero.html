@@ -9,7 +9,7 @@
             <p>Você irá mais longe.! Nós não estudamos para ganhar pouco dinheiro!</p>
             <div class="header-button">
               <a href="#" class="btn btn-common">Saiba Mais</i></a>
-              <a href="#" class="btn btn-border video-popup">Entre em contato</i></a>
+              <a href="#contact" class="btn btn-border video-popup">Entre em contato</i></a>
             </div>
           </div>
         </div>
@@ -20,6 +20,17 @@
         </div>
       </div> 
     </div> 
+  </div>
+
+  <div class="container">
+    {% if messages %}
+      {% for m in messages %}
+        <div class="alert alert-{{ m.tags }}">
+          <button type="button" class="close" data-dismiss="alert"></button>
+          <strong>{{ m }}</strong>
+        </div>
+      {% endfor %}
+    {% endif %}
   </div>
   <!-- Hero Area End -->
 </header>

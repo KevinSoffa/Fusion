@@ -143,3 +143,57 @@ class Features(Base):
 
     def __str__(self):
         return self.nome
+
+
+class Precos(Base):
+    ICONE_CHOICES = (
+        ('lni-package', 'Caixa'),
+        ('lni-drop', 'Gota'),
+        ('lni-star', 'Estrela')
+    )
+    PLANOS = (
+        ('pro', 'PRO'),
+        ('plus', 'PLUS'),
+        ('premium', 'PREMIUM')
+    )
+
+    preco = models.CharField(
+        'Preço',
+        max_length=10,
+        default=True
+    )
+    plano = models.CharField(
+        'Planos',
+        max_length=40,
+        choices=PLANOS,
+        default=True
+    )
+    icone = models.CharField(
+        'Icone',
+        max_length=25,
+        choices= ICONE_CHOICES,
+        default=True
+    )
+    usuario = models.IntegerField(
+        'Número de Usuários',
+        default=0
+    )
+    capacidade_db = models.CharField(
+        'Capacidade Banco de Dados',
+        max_length=50
+    )
+    suporte = models.CharField(
+        'Suporte',
+        max_length=50
+    )
+    atualizacao = models.CharField(
+        'Atualizacao',
+        max_length=55
+    )
+
+    class Meta:
+        verbose_name = 'Preço'
+        verbose_name_plural = 'Preços'
+
+    def __str__(self):
+        return self.plano
