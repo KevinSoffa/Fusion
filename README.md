@@ -15,4 +15,6 @@ Com banco de dados será PostgreSQL.<br>
 O Site estava estático e agora é dinâmico</h2>
 <hr>
 <h3>Todo Back-End é Python Django. Todas informações como Funcionários, Serviços, Preços estão salvas no Banco de Dados</h3>
+<h3>Acesse a página online e confira &#x1F447</h3>
+<a class="link-git" href="https://web-production-2c51.up.railway.app" target="_blank">Clique aqui para acessar a página online - Fusion</a>
 
